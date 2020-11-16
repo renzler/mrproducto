@@ -7,7 +7,7 @@ Planned Features:
 To-Do list - Don't force yourself to remember things; make Mr. Producto remember them for you.
     Sortable, Filterable, reportable, groupable
     Saves data into a database
-    Set piorities to your tasks, or task groups
+    Set priorities to your tasks, or task groups
     Calender View
         Will work just like Outlook calendars do
     Reminders
