@@ -1,7 +1,7 @@
 # mrproducto
 Mr. Producto is a productivity tool that provides a to-do list and a time tracker, among other features.
 
-Current Features:
+Current Features: Nothing, for now.
 
 Planned Features:
 To-Do list - Don't force yourself to remember things; make Mr. Producto remember them for you.
