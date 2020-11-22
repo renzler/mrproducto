@@ -31,44 +31,16 @@ def todowindow():
     def labels():
         # Define firstname label and properties
         tasknamelabel = Label(to_do_window,
-                               text='Name', fg='black', width=8, font=["Trebuchet MS", 10]).grid(row=2, sticky=E)
+                               text='Name', fg='black', font=["Trebuchet MS", 10]).grid(row=2, sticky=E)
         typelabel = tk.Label(to_do_window,
-                                 text="Type", fg="black", width=8, font=("Trebuchet MS", 10)).grid(row=3, sticky=E)
-        # Define gamertaglabel label and properties
-        gamertaglabel = tk.Label(to_do_window,
-                                 text="Gamertag", fg="black", width=8, font=("Trebuchet MS", 10)).grid(row=4, sticky=E)
-        # Define emaillabel label and properties
-        emaillabel = tk.Label(to_do_window,
-                              text="Email Address", fg="black", width=12, font=("Trebuchet MS", 10)).grid(
-                                row=5,sticky=E, padx=13)
-        # Define emaillabel label and properties
-        # password1label = tk.Label(to_do_window,
-        #                           text="Password", fg="black", width=12, font=("Trebuchet MS", 10)).grid(row=5, sticky=E)
-        # password2label = tk.Label(to_do_window,
-        #                           text="Confirm Password", fg="black", width=16, font=("Trebuchet MS", 10)).grid(row=6,
-        #                                                                                                          sticky=E,
-        #                                                                                                          padx=11)
-        # missingfeatures = tk.Label(to_do_window,
-        #                            text="Missing Features:\nSubmission Result Messages", fg="black", width=32,
-        #                            font=("Trebuchet MS", 10)).grid(row=5, sticky=W, columnspan=2)
-        # requirements = tk.Label(to_do_window,
-        #                         text='Requirements:\nGamertags:\nMust be unique and be between 3 and 24 '
-        #                              'alphanumeric characters\nCannot contain symbols\nEmail addresses:\nMust '
-        #                              'be unique, Must be a valid format\nPasswords must be at least 15 '
-        #                              'characters\nPasswords must contain at least one of the following:\nUppercase '
-        #                              'letter, Lowercase letter, Number\nA symbol, but not a semicolon or an exclamation '
-        #                              'point',
-        #                         fg="black", width=54, font=("Trebuchet MS", 10)).grid(row=6, column=0,
-        #                                                                               sticky=W, columnspan=2)
-        global validatefaillabel
-        validatefaillabel = tk.Label(to_do_window,
-                                     text="Invalid Entry; Not Submitted", fg="black", font=("Trebuchet MS", 10))
-        global validatepasslabel
-        validatepasslabel = tk.Label(to_do_window,
-                                     text="Entry Submission Attempted", fg="black", font=("Trebuchet MS", 10))
-        global validateonlylabel
-        validateonlylabel = tk.Label(to_do_window,
-                                     text="Valid Entry; Ready for Submission", fg="black", font=("Trebuchet MS", 10))
+                                 text="Type", fg="black", font=("Trebuchet MS", 10)).grid(row=3, sticky=E)
+        # Define prioritylabel label and properties
+        prioritylabel = tk.Label(to_do_window,
+                                 text="Priority", fg="black", font=("Trebuchet MS", 10)).grid(column=0, row=4, sticky=E)
+        # Define frequencylabel label and properties
+        frequencylabel = tk.Label(to_do_window,
+                              text="Frequency", fg="black", font=("Trebuchet MS", 10)).grid(
+                                row=5,sticky=E)
 
 
     def entries():
@@ -78,32 +50,32 @@ def todowindow():
         firstnameentry = tk.Entry(to_do_window,
                                   fg="black", bg="white", width=32)
         # Define firstnameentry location
-        firstnameentry.grid(row=1, column=1, sticky=W)
+        firstnameentry.grid(row=2, column=1, sticky=W)
         # Define typeentry as a global variable
         global typeentry
         # Define typeentry as text input field
         typeentry = tk.Entry(to_do_window,
                                  fg="black", bg="white", width=32)
-        typeentry.grid(row=2, column=1, sticky=W)
-        # Define gamertagentry as a global variable
-        global gamertagentry
-        # Define gamertagentry as text input field
-        gamertagentry = tk.Entry(to_do_window,
+        typeentry.grid(row=3, column=1, sticky=W)
+        # Define priorityentry as a global variable
+        global priorityentry
+        # Define priorityentry as text input field
+        priorityentry = tk.Entry(to_do_window,
                                  fg="black", bg="white", width=32)
-        # Define gamertagentry location
-        gamertagentry.grid(row=3, column=1, sticky=W)
-        # Define emaillabel label and properties
-        # emaillabel = tk.Label(to_do_window,
-        #                       text="Email Address", fg="black", width=12, font=("Trebuchet MS", 10)).grid(row=4, sticky=E,
+        # Define priorityentry location
+        priorityentry.grid(row=4, column=1, sticky=W)
+        # Define frequencylabel label and properties
+        # frequencylabel = tk.Label(to_do_window,
+        #                       text="frequency Address", fg="black", width=12, font=("Trebuchet MS", 10)).grid(row=4, sticky=E,
         #                                                                                                   padx=13)
-        # Define emailentry as a global variable
-        # global emailentry
-        # Define emailentry as text input field
-        global emailentry
-        emailentry = tk.Entry(to_do_window,
+        # Define frequencyentry as a global variable
+        # global frequencyentry
+        # Define frequencyentry as text input field
+        global frequencyentry
+        frequencyentry = tk.Entry(to_do_window,
                               fg="black", bg="white", width=32)
-        # Define emailentry location
-        emailentry.grid(row=4, column=1, sticky=W)
+        # Define frequencyentry location
+        frequencyentry.grid(row=5, column=1, sticky=W)
 
         # # Define password1entry as a global variable
         # global password1entry
@@ -137,7 +109,7 @@ def todowindow():
                                command=todowindow
                                )
         # Define desired location of button
-        newitembutton.grid(row=1, column=0, pady=1, padx=5)
+        newitembutton.grid(row=6, column=0, pady=1, padx=5)
 
         # Create do-do button
         listitemsbutton = Button(to_do_window,
@@ -151,8 +123,8 @@ def todowindow():
                                # command=todowindow
                                )
         # Define desired location of button
-        listitemsbutton.grid(row=1, column=1, pady=1)
+        listitemsbutton.grid(row=6, column=1, pady=1)
 
     buttons()
-    #entries()
+    entries()
     labels()
